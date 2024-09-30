@@ -5,8 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const foodRouter = express.Router();
 
-// Thư mục lưu trữ tệp tạm thời
-const uploadDir = '/tmp/uploads';
+const uploadDir = path.join(__dirname, 'tmp/uploads');
 
 // Kiểm tra và tạo thư mục nếu nó không tồn tại
 if (!fs.existsSync(uploadDir)) {
