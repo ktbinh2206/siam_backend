@@ -5,7 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const foodRouter = express.Router();
 
-const uploadDir = path.join(__dirname, 'tmp/uploads');
+// Đường dẫn đến thư mục uploads trong /tmp
+const uploadDir = path.join('/tmp', 'uploads');
 
 // Kiểm tra và tạo thư mục nếu nó không tồn tại
 if (!fs.existsSync(uploadDir)) {
